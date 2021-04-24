@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BuzzQuizz</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link href="img/buzzquizz.png" rel="icon" type="image/x-icon" />
+</head>
+
+    <header>
+        <p>BuzzFeed</p>
+    </header>
+
+<!-- PÁGINA INICIAL LISTAGEM DE TODOS OS QUIZZES -->
+<section class="pagina-listagem-de-quizzes">
+    <div class="container-caixa">
+        <div  class="caixa-botão">
+            <p>Você não criou nenhum quizz ainda :(</p>
+            <button onclick="carregarPaginaCriarQuizz()">Criar Quizz</button>
+        </div>
+    
+
+        <div class="titulo-pagina-dos-quizzes">
+            <h2>Todos os Quizzes</h2>
+        </div>
+             
+        <div class="container-quizzes">
+
+        </div>
+    </div>
+
+</section>
+
+
+
+
+<div class="pagina-quizz">
+    
+    <div class="imagem-capa">
+    </div>
+    <div class="perguntas">
+    </div>
+    <div class="resultado">
+        <div class="caixa-branca">
+            <div class="caixa-vermelha">
+                <h1>X% de acerto: ${title}</h1>
+            </div>
+            <div class="foto-texto">
+                <img src="${image}">
+                <h2>${text}</h2>
+            </div>
+        </div>
+        <div class="resetar-quizz">
+            <button>Reiniciar quizz</button>
+            <p>Voltar pra home</p>
+        </div>
+    </div>
+
+</div> 
+
+
+
+
+<!-- PÁGINA DO FORMULÁRIO -->
+
+<div class=" pagina-formulario formulario-tela-inicio escondido">
+    <h1>Comece pelo Começo</h1>
+    
+
+    <div class="formulario">
+        <input type="text" class="titulo-quizz" placeholder="Título do seu quizz" minlength="20" maxlength="65">
+        <input type="url" class="url-img-quizz" placeholder="URL da imagem do seu quizz">
+        <input type="text" class="qtdd-perguntas" placeholder="Quantidade de perguntas do quizz">
+        <input type="text" class="qtdd-niveis" placeholder="Quantidade de níveis do quizz">
+    </div>
+    
+    <button onclick="enviarDados()">Prosseguir pra criar perguntas</button>
+</div>
+
+<div class="pagina-formulario formulario-tela-perguntas escondido">
+    <h1>Crie suas perguntas</h1>
+
+    <div class="container-perguntas">
+        
+    
+        </div>
+
+        <button onclick="enviarNiveis()">Finalizar Quizz</button>
+</div>
+
+<div class="pagina-formulario formulario-tela-final escondido">
+    <h1>Seu quizz está pronto!</h1>
+
+    <div class="capa-do-quizz">
+        
+    </div>
+
+    <button>Acessar Quizz</button>
+    <a href="#">Voltar pra home</a>
+</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+    <script type="text/javascript" src="scripts/scriptform.js"></script>
+    <script type="text/javascript" src="scripts/obterQuizzes.js"></script>
+    <script type="text/javascript" src="scripts/paginaQuizz.js"></script>
+    <script type="text/javascript" src="scripts/conexãoServidor.js"></script>
+    
+</body>
+</html>
